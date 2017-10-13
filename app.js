@@ -7,11 +7,18 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
-    res.render('index');
+    res.render('Index');
 });
 
 app.get('/', function (req, res) {
-    res.render('about');
+    res.render('Index');
 });
 
+app.get('/index', function (req, res) {
+    res.render('Index');
+
+app.get('/about', function (req, res) {
+        res.render('About');
+    });
+});
 app.listen(7000);
